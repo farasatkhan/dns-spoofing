@@ -21,3 +21,17 @@ docker run --name my-dnsmasq --rm -it -p 0.0.0.0:53:53/udp -v <path-to-dnsmasq.c
 ```
 
 Replace <path-to-dnsmasq.conf-on-pc> with the actual path to your dnsmasq.conf file.
+
+### Mobile Device Configuration (Android)
+
+1. Install `rethink.apk` from `https://github.com/celzero/rethink-app` on your phone.
+
+2. Configure the DNS settings in the rethink app:
+
+   - Navigate to Configure > DNS > Other DNS > DNS 53 > Add DNS Proxy
+   - Set Proxy Name to your DNS server's IP address
+   - Set Port to 53
+
+3. Start the DNS proxy in the rethink app.
+
+4. Check whether DNS Spoofing is working or not by going to Chrome and visit `chrome://net-internals` and enter the target IP address to check if DNS spoofing is working correctly.
